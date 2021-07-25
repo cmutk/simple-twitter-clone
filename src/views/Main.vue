@@ -1,16 +1,15 @@
 <template>
-<div class="flex flex-row w-full">
-<main-layout>
-    <template v-slot:main-header-column>
-      <main-nav></main-nav>
-    </template>
-    <template v-slot:main-content>
-      <router-view :key="$route.fullPath" />
-    </template>          
-  </main-layout>
-  <mobile-nav v-if="isUserLoggedIn && windowWidth<500"/>
-</div>
-  
+  <div class="flex flex-row w-full">
+    <main-layout>
+      <template v-slot:main-header-column>
+        <main-nav></main-nav>
+      </template>
+      <template v-slot:main-content>
+        <router-view :key="$route.fullPath" />
+      </template>
+    </main-layout>
+    <mobile-nav v-if="isUserLoggedIn && windowWidth < 500" />
+  </div>
 </template>
 
 <script>
@@ -25,34 +24,32 @@ export default {
   components: {
     MainLayout,
     MainNav,
-    MobileNav
+    MobileNav,
     // SignUpBanner
-
   },
   data() {
     return {
       key: this.$route.path,
-      windowWidth : 0,
+      windowWidth: 0,
     };
   },
   created() {
-    this.$data.windowWidth=window.innerWidth;
-    window.addEventListener('resize',this.handleResize);
+    this.$data.windowWidth = window.innerWidth;
+    window.addEventListener("resize", this.handleResize);
   },
-  destroyed(){
-    window.removeEventListener('resize',this.handleResize);
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
   },
-  methods:{
-    handleResize(){
-      this.$data.windowWidth=window.innerWidth;
-    }
-  },
-  computed:{
-    isUserLoggedIn(){
-      return this.$store.getters.getLoggedUser
+  methods: {
+    handleResize() {
+      this.$data.windowWidth = window.innerWidth;
     },
-  }    
-  
+  },
+  computed: {
+    isUserLoggedIn() {
+      return this.$store.getters.getLoggedUser;
+    },
+  },
 };
 </script>
 <style lang="postcss" scoped>

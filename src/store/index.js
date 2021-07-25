@@ -59,24 +59,33 @@ export default new Vuex.Store({
           credentials.password === resObj.password
         ) {
           context.dispatch("fetchLoggedUser", resObj.userId);
-        } 
-        else{
-          context.dispatch("redirectToLoginPageWithError",credentials.username)
+        } else {
+          context.dispatch(
+            "redirectToLoginPageWithError",
+            credentials.username
+          );
         }
       });
     },
     fetchLoggedUser(context, id) {
-      axios.get("/users?userId=" + id).then((response) => {
-        context.commit("setLoggedUser", response.data);
-      }).then(()=>{
-        context.dispatch("routeToLoggedUserPage")
+      axios
+        .get("/users?userId=" + id)
+        .then((response) => {
+          context.commit("setLoggedUser", response.data);
+        })
+        .then(() => {
+          context.dispatch("routeToLoggedUserPage");
+        });
+    },
+    routeToLoggedUserPage() {
+      router.push("/home");
+    },
+    redirectToLoginPageWithError(context, userName) {
+      router.push({
+        name: "Login",
+        params: { Error: "error" },
+        query: { username_or_email: `${userName}`, redirect_after_login: "/" },
       });
-    },
-    routeToLoggedUserPage(){
-      router.push("/home")
-    },
-    redirectToLoginPageWithError(context,userName){
-       router.push({name:"Login",params:{Error:"error"},query:{username_or_email:`${userName}`,redirect_after_login:"/"}},)
     },
     postNewStatus(context, title) {
       axios
@@ -93,7 +102,6 @@ export default new Vuex.Store({
         .then((response) => {
           const statusParam = "status?userId=" + response.data.userId;
           context.dispatch("fetchTweets", statusParam);
-         
         });
     },
     fetchTrendings(context) {
@@ -172,17 +180,18 @@ export default new Vuex.Store({
       });
       commit("setTweets", copyOfRawStatus);
     },
-    fetchRandomUsers(context){
-      const arrLength =3;
-      const randomUserIdArr =[];
-      for(let i =0;i<arrLength;i++){
-        randomUserIdArr.push("userId="+(Math.floor(Math.random()*20)+1));
+    fetchRandomUsers(context) {
+      const arrLength = 3;
+      const randomUserIdArr = [];
+      for (let i = 0; i < arrLength; i++) {
+        randomUserIdArr.push("userId=" + (Math.floor(Math.random() * 20) + 1));
       }
-      const userQueryString = "users?" + [...new Set(randomUserIdArr)].join("&");
+      const userQueryString =
+        "users?" + [...new Set(randomUserIdArr)].join("&");
       axios.get(`/${userQueryString}`).then((response) => {
         context.commit("setRandomUsers", response.data);
       });
-    }
+    },
   },
   getters: {
     getLoggedUser(state) {
@@ -197,8 +206,8 @@ export default new Vuex.Store({
     getUser(state) {
       return state.selectedUser;
     },
-    getRandomUsers(state){
-      return state.randomUsers
+    getRandomUsers(state) {
+      return state.randomUsers;
     },
     getSelectedTweet(state) {
       return state.selectedTweet.length === 0

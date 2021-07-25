@@ -1,5 +1,8 @@
 <template>
-  <section name="sidebar-column" class="items-start self-stretch tw-0:hidden tw-1004:flex min-h-full mr-10px">
+  <section
+    name="sidebar-column"
+    class="items-start self-stretch tw-0:hidden tw-1004:flex min-h-full mr-10px"
+  >
     <div class="w-350px h-full">
       <slot />
     </div>
@@ -11,5 +14,4 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

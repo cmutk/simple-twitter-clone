@@ -4,11 +4,13 @@
       <div class="flex flex-row justify-between">
         <div class="flex-1 flex justify-start"></div>
         <div class="flex flex-grow flex-shrink justify-center">
-          <f-icon :icon="['fab','twitter']" class="text-3xl text-blue" />
+          <f-icon :icon="['fab', 'twitter']" class="text-3xl text-blue" />
         </div>
         <div class="flex-1 flex justify-end">
           <div class="min-w-1/2">
-            <base-button disabled class="btn primary disabled">next</base-button>
+            <base-button disabled class="btn primary disabled"
+              >next</base-button
+            >
           </div>
         </div>
       </div>
@@ -28,7 +30,14 @@
         v-model="email"
         required
       />
-      <form-input v-else id="A tel input" type="tel" span="Phone" v-model="tel" required />
+      <form-input
+        v-else
+        id="A tel input"
+        type="tel"
+        span="Phone"
+        v-model="tel"
+        required
+      />
     </div>
     <div class="px-4 py-3 flex-1">
       <base-button
@@ -68,7 +77,7 @@ export default {
   },
   props: {},
   methods: {
-    toggleSignupWith: function () {
+    toggleSignupWith: function() {
       this.withEmail = !this.withEmail;
       this.toggleButtonText = this.withEmail
         ? "Use Phone Instead"

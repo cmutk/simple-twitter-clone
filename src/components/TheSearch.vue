@@ -1,11 +1,17 @@
 <template>
   <generic-main>
     <primary-column border-style="column" class="bg-gray-light">
-      <header class="flex flex-col sticky bg-white border-b border-gray-light top-0 z-10">
+      <header
+        class="flex flex-col sticky bg-white border-b border-gray-light top-0 z-10"
+      >
         <div class="h-54px">
-          <div class="flex flex-row justify-center items-center w-full h-54px px-15px">
+          <div
+            class="flex flex-row justify-center items-center w-full h-54px px-15px"
+          >
             <go-back-button></go-back-button>
-            <div class="flex-grow flex-shrink justify-center content-center mx-5px my-10px">
+            <div
+              class="flex-grow flex-shrink justify-center content-center mx-5px my-10px"
+            >
               <search-box />
             </div>
             <div class="ml-20px">
@@ -28,11 +34,11 @@
       <the-tweets></the-tweets>
     </primary-column>
     <sidebar-column class="pb-59px">
-      <signup-card v-if="!isLoggedIn"/>
-      <search-filters/>
+      <signup-card v-if="!isLoggedIn" />
+      <search-filters />
       <the-trending column-type="sidebar"></the-trending>
     </sidebar-column>
-    <sign-up-banner v-if="!isLoggedIn"/>
+    <sign-up-banner v-if="!isLoggedIn" />
   </generic-main>
 </template>
 
@@ -45,7 +51,7 @@ import BaseButton from "@/components/shared/BaseButton.vue";
 import GoBackButton from "@/components/shared/GoBackButton.vue";
 import SearchBox from "@/components/TheSearchBox.vue";
 import SignupCard from "@/components/sidebarCards/TheSignUpCard.vue";
-import SignUpBanner from '@/components/layouts/TheSignUpBanner.vue'
+import SignUpBanner from "@/components/layouts/TheSignUpBanner.vue";
 import SearchFilters from "@/components/sidebarCards/TheSearchFilters.vue";
 import TheTrending from "@/components/TheTrending.vue";
 import TheTweets from "@/components/TheTweets.vue";
@@ -77,11 +83,11 @@ export default {
     const queryEncoded = encodeURIComponent(uri);
     this.$store.dispatch("fetchSearchResults", queryEncoded);
   },
-  computed:{
-    isLoggedIn(){
-      return this.$store.getters.getLoggedUser
-    }
-  }
+  computed: {
+    isLoggedIn() {
+      return this.$store.getters.getLoggedUser;
+    },
+  },
 };
 </script>
 

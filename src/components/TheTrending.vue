@@ -23,7 +23,8 @@
           <router-link
             :to="{ path: '/search', query: { q: trend.keyword } }"
             class="w-full h-full"
-          exact>
+            exact
+          >
             <div class="flex-grow flex-shrink flex flex-col">
               <div class="inline-flex flex-row justify-between items-baseline">
                 <!-- <span class="text-13px text-gray-dark">Türkiye tarihinde gündemde</span> -->

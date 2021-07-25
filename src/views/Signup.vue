@@ -6,14 +6,11 @@
   </div>
 </template>
 <script>
-// this might be modal big and we can use seperate modal for create tweets
-// import FromInput from "@/components/LoginSignupInput.vue";
 import SignupForm from "@/components/forms/SignupForm.vue";
 export default {
   name: "Signup",
   components: {
     SignupForm,
-    // FromInput,
   },
 };
 </script>

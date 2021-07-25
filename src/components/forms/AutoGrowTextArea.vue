@@ -20,10 +20,10 @@ export default {
       type: String,
       default: null,
     },
-    value:{
-      type:String,
-      default:""
-    }
+    value: {
+      type: String,
+      default: "",
+    },
   },
 
   methods: {
@@ -35,5 +35,4 @@ export default {
   },
 };
 </script>
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

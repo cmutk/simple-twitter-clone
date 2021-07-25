@@ -3,15 +3,15 @@
     <primary-column border-style="column" class="bg-gray-light">
       <the-top-nav>
         <template v-slot:top>
-          <go-back-button/>
-          <the-search-bar class="tw-0:flex tw-500:hidden"/>
-            <div class="flex-col tw-0:hidden tw-500:flex" >
-              <h1 class="font-extrabold text-19px">{{ TheUser.alias }}</h1>
-              <p class="text-13px text-gray-dark">{{ TweetCount }} Tweets</p>
-            </div>
+          <go-back-button />
+          <the-search-bar class="tw-0:flex tw-500:hidden" />
+          <div class="flex-col tw-0:hidden tw-500:flex">
+            <h1 class="font-extrabold text-19px">{{ TheUser.alias }}</h1>
+            <p class="text-13px text-gray-dark">{{ TweetCount }} Tweets</p>
+          </div>
         </template>
         <template v-if="!isLoggedIn" v-slot:bottom>
-        <top-bar-sign-up-banner class="tw-0:flex tw-500:hidden"/>
+          <top-bar-sign-up-banner class="tw-0:flex tw-500:hidden" />
         </template>
       </the-top-nav>
       <div class="flex flex-col">
@@ -25,8 +25,14 @@
         </div>
         <div class="flex flex-col pb-15px px-15px pt-10px bg-white">
           <div class="flex flex-row justify-between">
-            <div class="-ml-1 -mb-1 -mt-15% w-1/4 border-4 border-white rounded-full flex">
-              <img :src="TheUser.avatar" alt="Profile İmage" class="h-full w-full rounded-full" />
+            <div
+              class="-ml-1 -mb-1 -mt-15% w-1/4 border-4 border-white rounded-full flex"
+            >
+              <img
+                :src="TheUser.avatar"
+                alt="Profile İmage"
+                class="h-full w-full rounded-full"
+              />
             </div>
             <div class="h-39px mb-10px">
               <base-button class="btn secondary">follow</base-button>
@@ -59,7 +65,9 @@
         </div>
       </div>
       <div class="h-54px">
-        <div class="flex flex-row justify-between items-center h-full w-full text-15px">
+        <div
+          class="flex flex-row justify-between items-center h-full w-full text-15px"
+        >
           <base-button class="btn tab">Tweets</base-button>
           <base-button class="btn tab">Tweets & replies</base-button>
           <base-button class="btn tab">Media</base-button>
@@ -69,14 +77,16 @@
       <the-tweets></the-tweets>
     </primary-column>
     <sidebar-column class="pb-59px">
-      <div class="flex-grow flex-shrink justify-center content-center mx-5px my-10px">
+      <div
+        class="flex-grow flex-shrink justify-center content-center mx-5px my-10px"
+      >
         <search-box />
       </div>
-      <signup-card/>
-      <you-might-like/>
+      <signup-card />
+      <you-might-like />
       <the-trending column-type="sidebar"></the-trending>
     </sidebar-column>
-      <sign-up-banner v-if="!isLoggedIn && windowWidth>499"/>
+    <sign-up-banner v-if="!isLoggedIn && windowWidth > 499" />
   </generic-main>
 </template>
 
@@ -93,11 +103,10 @@ import SignupCard from "@/components/sidebarCards/TheSignUpCard.vue";
 import YouMightLike from "@/components/sidebarCards/TheYouMightLike.vue";
 import TheTrending from "@/components/TheTrending.vue";
 import TheTweets from "@/components/TheTweets.vue";
-import TheTopNav from './TheTopNav.vue';
-import TheSearchBar from './TheSearchBar.vue';
-import TopBarSignUpBanner from './layouts/TopBarSignUpBanner.vue';
-import SignUpBanner from './layouts/TheSignUpBanner.vue';
-
+import TheTopNav from "./TheTopNav.vue";
+import TheSearchBar from "./TheSearchBar.vue";
+import TopBarSignUpBanner from "./layouts/TopBarSignUpBanner.vue";
+import SignUpBanner from "./layouts/TheSignUpBanner.vue";
 
 export default {
   name: "TheUserDetails",
@@ -115,31 +124,30 @@ export default {
     TheTopNav,
     TheSearchBar,
     TopBarSignUpBanner,
-    SignUpBanner
-  
+    SignUpBanner,
   },
-    
+
   data() {
     return {
       userName: this.$route.params.user,
-      windowWidth : 0,
+      windowWidth: 0,
     };
   },
   created() {
     const uri = this.$data.userName;
     this.$store.dispatch("fetchUserStatus", uri);
-    window.addEventListener('resize',this.handleResize);
+    window.addEventListener("resize", this.handleResize);
   },
-  destroyed(){
-     window.removeEventListener('resize',this.handleResize)
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
   },
-  methods:{
-    handleResize(){
-      this.$data.windowWidth=window.innerWidth;
-    }
+  methods: {
+    handleResize() {
+      this.$data.windowWidth = window.innerWidth;
+    },
   },
   filters: {
-    formatDate: function (date) {
+    formatDate: function(date) {
       return moment(date).format("MMMM YYYY");
     },
   },
@@ -147,13 +155,12 @@ export default {
     TheUser() {
       return this.$store.getters.getUser;
     },
-    isLoggedIn(){
-      return this.$store.getters.getLoggedUser
+    isLoggedIn() {
+      return this.$store.getters.getLoggedUser;
     },
     TweetCount() {
       return this.$store.getters.getTweetsLength;
     },
-
   },
 };
 </script>

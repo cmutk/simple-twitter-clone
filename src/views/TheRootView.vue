@@ -8,5 +8,4 @@ export default {
   name: "TheRootView",
 };
 </script>
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

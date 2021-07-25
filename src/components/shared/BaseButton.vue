@@ -13,7 +13,6 @@
 <script>
 export default {
   name: "BaseButton",
-  //   inheritAttrs: false,
   props: {
     href: {
       elementType: String,
@@ -33,15 +32,9 @@ export default {
       return this.href ? "a" : "button";
     },
   },
-  // methods: {
-  //   handleBaseButtonClick() {
-  //     this.$emit("handleBaseButtonClick");
-  //   },
-  // },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="postcss">
 .btn,
 .with-icons,

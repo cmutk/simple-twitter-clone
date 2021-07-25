@@ -1,9 +1,9 @@
 <template>
-  <generic-card :aria-label="ariaLabel" :class="[cardType,bgColor]">
+  <generic-card :aria-label="ariaLabel" :class="[cardType, bgColor]">
     <div
       class="py-10px pl-15px pr-9px border-b border-gray-light flex flex-row justify-between items-center"
     >
-      <h1 class="font-extrabold text-19px">{{headerText}}</h1>
+      <h1 class="font-extrabold text-19px">{{ headerText }}</h1>
       <base-button v-if="headerIcon" class="with-icon">
         <f-icon :icon="headerIcon" class="text-blue"></f-icon>
       </base-button>
@@ -12,11 +12,14 @@
     <ul>
       <slot name="content"></slot>
     </ul>
-    <div v-if="buttonHref"
+    <div
+      v-if="buttonHref"
       class="button-container"
-      :class="cardType==='card sidebar'?' rounded-b-xl ':''"
+      :class="cardType === 'card sidebar' ? ' rounded-b-xl ' : ''"
     >
-      <base-button :href="buttonHref" class="text-no-hover">{{buttonText}}</base-button>
+      <base-button :href="buttonHref" class="text-no-hover">{{
+        buttonText
+      }}</base-button>
     </div>
   </generic-card>
 </template>
@@ -67,8 +70,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.button-container{
-  @apply py-10px px-15px cursor-pointer
+.button-container {
+  @apply py-10px px-15px cursor-pointer;
 }
 .white-bg {
   @apply bg-white;

@@ -1,10 +1,10 @@
 <template>
   <label>
-    <span :for="id">{{span}}</span>
+    <span :for="id">{{ span }}</span>
     <input
       :id="id"
       :name="id"
-      :type="type ? type :'text'"
+      :type="type ? type : 'text'"
       :value="value"
       @input="handleInput($event.target.value)"
       v-bind="$attrs"

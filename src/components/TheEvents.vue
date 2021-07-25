@@ -2,10 +2,10 @@
   <article :columnType="columnType">
     <list-card
       aria-label="Events"
-      :card-type="columnType==='sidebar'? 'card sidebar':'card'"
-      :bg-color="columnType==='sidebar'? 'gray-bg':'white-bg'"
+      :card-type="columnType === 'sidebar' ? 'card sidebar' : 'card'"
+      :bg-color="columnType === 'sidebar' ? 'gray-bg' : 'white-bg'"
       header-text="What's happening"
-      :header-icon="columnType==='sidebar'? ['fas', 'cog']:undefined"
+      :header-icon="columnType === 'sidebar' ? ['fas', 'cog'] : undefined"
       button-text="Show more"
       button-href="/login"
     >
@@ -13,19 +13,27 @@
         <li
           v-for="event of events"
           :key="event.id"
-          :class="columnType==='sidebar'?'hover:bg-gray-light':'hover:bg-blue hover:bg-opacity-10'"
+          :class="
+            columnType === 'sidebar'
+              ? 'hover:bg-gray-light'
+              : 'hover:bg-blue hover:bg-opacity-10'
+          "
           class="flex flex-row h-22 py-10px px-15px border-b border-gray-light cursor-pointer"
         >
           <div class="flex-6 flex flex-col mr-15px">
             <div class="inline-flex flex-row justify-between items-baseline">
               <!-- <span class="text-13px text-gray-dark">Türkiye tarihinde gündemde</span> -->
-              <span class="inline-flex flex-row items-center text-13px font-normal text-gray-dark">
-                <span>{{event.genre}}</span>
+              <span
+                class="inline-flex flex-row items-center text-13px font-normal text-gray-dark"
+              >
+                <span>{{ event.genre }}</span>
                 <span class="mx-1" v-html="middot"></span>
-                <span>{{event.timeline}}</span>
+                <span>{{ event.timeline }}</span>
               </span>
             </div>
-            <span class="text-15px font-bold break-words">{{event.title}}</span>
+            <span class="text-15px font-bold break-words">{{
+              event.title
+            }}</span>
           </div>
           <div class="flex-1 bg-blue p-4 rounded-xl"></div>
         </li>
@@ -101,5 +109,4 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

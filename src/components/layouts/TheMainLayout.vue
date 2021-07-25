@@ -12,7 +12,6 @@
 <script>
 import GenericHeader from "@/components/layouts/TheGenericHeader.vue";
 
-
 export default {
   name: "TheMainLayout",
   components: {

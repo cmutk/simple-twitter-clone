@@ -13,24 +13,6 @@
 export default {
   name: "TheSearchBox",
   inheritAttrs: false,
-  //   props: {
-
-  //   },
-  //   computed: {
-  //     getListeners() {
-  //       const { input, ...rest } = this.$listeners;
-  //       input ? console.log("its input", this.id) : console.log(rest);
-  //       return {
-  //         rest
-  //       };
-  //     }
-  //   },
-  //   methods: {
-  //     handleInput(ev) {
-  //       console.log(ev.target.value);
-  //       this.$emit("change", ev.target.value);
-  //     }
-  //   }
 };
 </script>
 <style scoped lang="postcss">
