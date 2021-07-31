@@ -1,7 +1,6 @@
 # Simple-Twitter-Clone
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/26392038/127730836-c90309a1-2dc9-487f-bf6e-3a1c7b8baeca.gif)
-
+<img alt="ezgif com-gif-maker" src="https://user-images.githubusercontent.com/26392038/127730836-c90309a1-2dc9-487f-bf6e-3a1c7b8baeca.gif" width="100%">
 
 ## A very basic twitter clone with VueJS and TailwindCSS.
 
@@ -11,23 +10,25 @@ This is a very simple twitter clone which you can login, tweet and navigate betw
 ### 📱 Responsive layout
 
 <p  float="left">
-<img alt="ezgif com-gif-maker (7)" src="https://user-images.githubusercontent.com/26392038/127731798-de82e5bc-fe62-4751-83a6-4f1dccddfb66.gif" width="45%">
+<img alt="ezgif com-gif-maker (7)" src="https://user-images.githubusercontent.com/26392038/127731798-de82e5bc-fe62-4751-83a6-4f1dccddfb66.gif" width="49%">
 &nbsp
-<img alt="ezgif com-gif-maker (6)" src="https://user-images.githubusercontent.com/26392038/127732868-4b7eba02-793c-43f7-abf2-f047d9d69718.gif" width="45%">
+<img alt="ezgif com-gif-maker (6)" src="https://user-images.githubusercontent.com/26392038/127732868-4b7eba02-793c-43f7-abf2-f047d9d69718.gif" width="49%">
 </p>
 <p  float="left">
-<img alt="ezgif com-gif-maker (3)" src="https://user-images.githubusercontent.com/26392038/127732326-78de1270-d3c6-4eb6-9fc7-d14de260e4d6.gif" width="45%">
+<img alt="ezgif com-gif-maker (3)" src="https://user-images.githubusercontent.com/26392038/127732326-78de1270-d3c6-4eb6-9fc7-d14de260e4d6.gif" width="49%">
 &nbsp
-<img alt="ezgif com-gif-maker" src="https://user-images.githubusercontent.com/26392038/127732929-1fa519f3-e289-4925-baba-82aab3b5fc63.gif" width="45%">
+<img alt="ezgif com-gif-maker" src="https://user-images.githubusercontent.com/26392038/127732929-1fa519f3-e289-4925-baba-82aab3b5fc63.gif" width="49%">
 </p>
 
 ### 🤓 A little bit unrealistic login mechanism.
 
 To be able to simulate login mechanism without using auth libraries, plain text username and password is hardcoded to db. Since it doesn't have a real login mechanism if the username and password which is provided by user matches with the ones at db, it returns a user object instead of auth tokens. So it doesn't have a real login mechanism. To be able to login, you can use "Admin" as username and "123456" as password. 
 
-![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/26392038/127732831-13b17959-e767-4b2e-b6c1-af78eae20457.gif)
-
-![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/26392038/127731830-70169814-2473-40c0-b542-1147c7f87402.gif)
+<p  float="left">
+<img alt="ezgif com-gif-maker (4)" src="https://user-images.githubusercontent.com/26392038/127732831-13b17959-e767-4b2e-b6c1-af78eae20457.gif" width="49%">
+&nbsp
+<img alt="ezgif com-gif-maker (8)" src="https://user-images.githubusercontent.com/26392038/127731830-70169814-2473-40c0-b542-1147c7f87402.gif" width="49%">
+</p>
 
 
 ### 👌 Realistic navigation 
