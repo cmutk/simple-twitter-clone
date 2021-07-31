@@ -9,6 +9,7 @@ This is a very simple twitter clone which you can login, tweet and navigate betw
 
 ## Features 
 ### 📱 Responsive layout
+
 <p  float="left">
 <img alt="ezgif com-gif-maker (7)" src="https://user-images.githubusercontent.com/26392038/127731798-de82e5bc-fe62-4751-83a6-4f1dccddfb66.gif" width="45%">
 &nbsp
@@ -30,13 +31,19 @@ To be able to simulate login mechanism without using auth libraries, plain text 
 
 
 ### 👌 Realistic navigation 
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/26392038/127732929-1fa519f3-e289-4925-baba-82aab3b5fc63.gif)
+
+
 ### 👮‍♀️ Route guard/ Navigation guard & Redirects
+
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/26392038/127732689-11013683-2bf5-44a9-a670-bdc8a5823ef2.gif)
 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/26392038/127732485-803928a4-9f8a-4579-8111-9cea35cb4322.gif)
 
+
 ### 📦 Localstorage, fake REST api and Consuming REST api
+
 ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/26392038/127733121-f1c9c944-783d-4421-8f88-e00bdfc606d1.gif)
 
 
