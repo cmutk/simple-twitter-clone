@@ -1,6 +1,6 @@
 # Simple-Twitter-Clone
 
-<img alt="ezgif com-gif-maker" src="https://user-images.githubusercontent.com/26392038/127730836-c90309a1-2dc9-487f-bf6e-3a1c7b8baeca.gif" width="100%">
+<img alt="main_image" src="https://user-images.githubusercontent.com/26392038/127754902-996738b1-4f43-4748-8ef1-d652b5b6f045.gif" width="100%">
 
 ## A very basic twitter clone with VueJS and TailwindCSS.
 
@@ -25,27 +25,24 @@ This is a very simple twitter clone which you can login, tweet and navigate betw
 To be able to simulate login mechanism without using auth libraries, plain text username and password is hardcoded to db. Since it doesn't have a real login mechanism if the username and password which is provided by user matches with the ones at db, it returns a user object instead of auth tokens. So it doesn't have a real login mechanism. To be able to login, you can use "Admin" as username and "123456" as password. 
 
 <p  float="left">
-<img alt="ezgif com-gif-maker (4)" src="https://user-images.githubusercontent.com/26392038/127732831-13b17959-e767-4b2e-b6c1-af78eae20457.gif" width="49%">
+<img alt="Llgin_desktop" src="https://user-images.githubusercontent.com/26392038/127732831-13b17959-e767-4b2e-b6c1-af78eae20457.gif" width="49%">
 &nbsp
-<img alt="ezgif com-gif-maker (8)" src="https://user-images.githubusercontent.com/26392038/127731830-70169814-2473-40c0-b542-1147c7f87402.gif" width="49%">
+<img alt="login_mobile" src="https://user-images.githubusercontent.com/26392038/127731830-70169814-2473-40c0-b542-1147c7f87402.gif" width="49%">
 </p>
 
 
-### 👌 Realistic navigation 
-
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/26392038/127732929-1fa519f3-e289-4925-baba-82aab3b5fc63.gif)
-
-
-### 👮‍♀️ Route guard/ Navigation guard & Redirects
-
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/26392038/127732689-11013683-2bf5-44a9-a670-bdc8a5823ef2.gif)
-
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/26392038/127732485-803928a4-9f8a-4579-8111-9cea35cb4322.gif)
+### 👌 Realistic navigation with route guard/ navigation guard & redirects 👮‍♀️
+<p  float="left">
+<img alt="main_image" src="https://user-images.githubusercontent.com/26392038/127754902-996738b1-4f43-4748-8ef1-d652b5b6f045.gif" width="49%">
+&nbsp
+<img alt="route_guard" src="https://user-images.githubusercontent.com/26392038/127754910-579c18a0-5243-4abb-bb5a-ccc8e8e6ab07.gif" width="49%">
+</p>
 
 
-### 📦 Localstorage, fake REST api and Consuming REST api
+### 📦 Localstorage, fake REST api and consuming REST api
 
-![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/26392038/127733121-f1c9c944-783d-4421-8f88-e00bdfc606d1.gif)
+<img alt="ezgif com-gif-maker (5)" src="https://user-images.githubusercontent.com/26392038/127733121-f1c9c944-783d-4421-8f88-e00bdfc606d1.gif" width="100%">
+
 
 
 ## Installation & Usage
